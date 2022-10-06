@@ -1,0 +1,31 @@
+
+/* Footer */
+
+footer {
+    padding: 20px;
+    background-color: rgba(18, 18, 21, 0.634);
+    color: rgba(206, 149, 2, 0.968);
+}
+
+footer > ul {
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 740px) {
+        flex-direction: column;
+        padding-left: 30px;
+        width: 35%;
+    }
+}
+
+.footer-list {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-list:hover, .footer-list:focus {
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #fff;
+}

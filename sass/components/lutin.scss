@@ -1,0 +1,174 @@
+
+
+.lutin {
+    border: 1px solid black;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & .head {
+        border: 1px solid black;
+        height: 70px;
+        width: 70px;
+
+        border-radius: 50%;
+    }
+}
+
+.head {   
+    background-color: rgb(224, 168, 101);
+    position: relative; 
+
+    & .hat {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 51px 92px 21px;
+        border-color: transparent transparent black transparent;
+               
+        background: linear-gradient(#51db07, #d10404);
+
+        position: absolute;
+        top: -78px;
+        opacity: 0.96;
+
+        right: 0;
+        bottom: 55px;
+        left: 0;
+        
+        & .round {
+            position: relative;
+            top: 15px;
+            margin: 5px;
+            height: 5px;
+            width: 5px;
+            background: linear-gradient(#51db07, #d10404);
+            border-radius: 50%;            
+        }
+
+        & .round-1, .round-3, .round-5, .round-7 {
+            left: -5px;
+        }
+        & .round-2, .round-4, .round-6 {
+            right: -2px;
+        }
+     
+    }
+
+    & .hair {
+        position: absolute;
+        top: -7px;
+        left: -9px;
+        z-index: -2;
+        height: 100px;
+        width: 90px;
+        border: 1px solid rgb(255, 81, 0);
+        background-color: rgb(255, 81, 0);;
+        border-radius: 50% 50% 0;
+    }
+}
+
+.face {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    // height: 80%;
+
+    & .eye {
+        background-color: #fff;
+        position: relative;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        border: 1px solid green;
+        margin: 20px 9px 6px 9px;
+    }
+
+    &__iris {
+        position: absolute;
+
+        height: 5px;
+        width: 5px;
+        background-color: orange;
+        border-radius: 50%;
+    }
+
+}
+
+.head:hover .eyes__iris {
+    right: 0;
+    bottom: 0;
+}
+
+
+.nose {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: rgb(54, 36, 2);
+    border: 1px solid black;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.mouth {
+    margin-top: -1px;
+    // border: 2px solid rgba(201, 138, 21, 0.537);
+    height: 5px;
+    width: 30px;
+
+    & .lips {
+        height: 15px;
+        border: 2px solid transparent;
+        border-bottom: 2px solid red;
+        border-radius: 50%;
+    }
+}
+
+.head:hover .mouth {
+    width: 40px;
+}
+
+.neck {
+    margin-top: -5px;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(224, 168, 101);
+    border-top-left-radius: -25px;
+    z-index: -1;
+    position: relative;
+
+}
+
+.body {
+    position: relative;
+}
+.tronc {
+    margin-top: -5px;
+    background-color: rgb(11, 126, 27);
+
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 93px 39px 4px 40px;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    top: 1px;
+    left: -40px;
+    right: 0;
+    bottom: 55px;
+}

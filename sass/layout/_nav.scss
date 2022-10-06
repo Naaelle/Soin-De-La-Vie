@@ -1,0 +1,71 @@
+@use "../utils/variables";
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1040px) {
+        flex-direction: column;
+    }
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+
+    @media (max-width: 740px) {
+        flex-wrap: wrap;
+    }
+}
+
+nav > ul > .menu {
+    padding: 20px 10px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+nav > ul > .menu:hover, nav > ul > .menu:focus {
+    color: rgba(206, 149, 2, 0.968);
+}
+
+.sujet {
+    font-size: 35px;
+    padding: 20px;
+    cursor: pointer;
+    color: rgba(206, 149, 2, 0.968);
+    font-weight: bold;
+    font-family: variables.$font-title;
+}
+
+/* Bannière */
+
+.banniere {
+    width: 100%;
+    height: 60vh;
+    padding: 10px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.banniere > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+}
+
+.banniere-text {
+    color: #fff;
+    padding-bottom: 20px;
+    text-shadow: 3px 3px 2px #000;
+    background-color: rgba(18, 18, 21, 0.634);
+    width: 100%;
+    text-align: center;
+}
